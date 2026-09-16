@@ -55,12 +55,20 @@ ddok-video-prompt/
     ├── seedance-2.5.md
     ├── method.md
     ├── templates.md
+    ├── acceptance.md
+    ├── case-pattern-analysis.md
+    ├── official-seedance-patterns.md
+    ├── review-rubric.md
     └── cases.md
 ```
 
 ## 案例
 
 `references/cases.md` 收录并拆分了 6 个 DDOk《Candy》镜头案例：微距物理、实验室群戏、发布会、移动遮挡转场、前景拾取和美术馆群像对白。案例用于学习结构，不应机械复制人物、对白或世界观。
+
+Skill 不会在用户未指定时擅自加入秒数或时间码；每条正式提示词都必须明确“无 BGM，无配乐！”，并只设计现场同期声、环境声、动作声和对白。同时使用“严格、必须、始终、全程、绝不”等原案例式强约束语言锁定关键生成要求。
+
+每次生成后会按 100 分量表自审：DiDi_OK 六案保真占 90 分，Seedance 2.5 官方能力适配占 10 分；硬门槛失败或总分低于 90 的结果必须先重写，再交付。
 
 ## 资料来源
 
