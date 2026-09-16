@@ -1,15 +1,16 @@
 ---
 name: ddok-video-prompt
-description: This skill should be used when the user asks to “写生视频提示词”, “优化视频生成 prompt”, “按 DDOk 风格写镜头”, “把故事变成电影级视频提示词”, “设计一镜到底、纪录片手持、群像对白、物理变形或遮挡转场”, or provides an image, scene, script, storyboard, or rough idea that needs a production-ready text-to-video or image-to-video prompt. Do not use it for still-image prompts or ordinary screenplay writing unless the requested output is a video-generation prompt.
+description: This skill should be used when the user asks to “写 Seedance 2.5 提示词”, “写实电影感生视频”, “优化视频生成 prompt”, “按 DDOk 风格写镜头”, “把故事变成电影级视频提示词”, “设计一镜到底、纪录片手持、群像对白、物理变形或遮挡转场”, or provides images, video, audio, a scene, script, storyboard, or rough idea that needs a production-ready Seedance 2.5 prompt. Use it primarily for photorealistic cinematic text-to-video, reference-to-video, extension, or editing tasks. Do not use it for still-image prompts or ordinary screenplay writing unless the requested output is a video-generation prompt.
 ---
 
 # DDOk Video Prompt
 
-把用户的创意转化为可直接投喂视频生成模型的电影级提示词。复用 DDOk 案例中的决策方法：先建立可拍摄的空间与镜头路线，再用动作因果、真实物理、微表演、对焦行为和同期声把画面写“活”。不要机械复刻糖果、美术馆、人物身份或对白。
+把用户的创意转化为可直接投喂 Seedance 2.5 的写实电影级提示词。复用 DDOk 案例中的决策方法：先建立可拍摄的空间与镜头路线，再用动作因果、真实物理、微表演、对焦行为和同期声把画面写“活”。不要机械复刻糖果、美术馆、人物身份或对白。
 
 ## 读取参考资料
 
 - 生成任何正式提示词前，读取 `references/method.md`，按其中的镜头建模方法组织信息。
+- 使用 Seedance 2.5 的长叙事、多模态参考、原生声音、延长或编辑能力时，读取 `references/seedance-2.5.md`。
 - 任务涉及微距物理、实验室群戏、发布会、前景透视、遮挡转场或群像对白时，再读取 `references/cases.md` 中对应案例。只迁移机制，不搬运故事元素。
 - 需要输出可复制模板、分镜版或模型适配版时，读取 `references/templates.md`。
 
@@ -17,7 +18,7 @@ description: This skill should be used when the user asks to “写生视频提�
 
 ### 1. 锁定生成合同
 
-先确定或合理推断：生成模型、时长、横竖比、文生视频或图生视频、单镜头或多镜头、参考图约束、对白语言、声音要求。只有缺失信息会实质改变结果时才提问；其余采用清晰假设并直接生成。
+先确定或合理推断：时长、横竖比、文生视频/参考生成/延长/编辑模式、单镜头或多镜头、图像/视频/音频参考的职责、对白语言和声音要求。只有缺失信息会实质改变结果时才提问；其余采用清晰假设并直接生成。
 
 把用户明确要求视为最高优先级。用户指定 15 秒、一镜到底、首帧参考图或无配乐时，不得擅自改成更容易写的形式。
 
@@ -70,7 +71,7 @@ description: This skill should be used when the user asks to “写生视频提�
 
 ## 输出要求
 
-默认只输出可直接复制的中文提示词，使用自然段而非 YAML。开头先给全局视觉合同，随后按时间或空间推进，结尾给声音和必要禁止项。用户要求 Seedance、Sora、Veo、Kling 等模型时，适配其已知输入习惯，但不要捏造参数。
+默认只输出可直接复制到 Seedance 2.5 的中文提示词，使用自然段而非 YAML。开头先给全局视觉合同，随后按时间或空间推进，结尾给声音和必要禁止项。存在参考素材时，用 `@Image 1`、`@Video 1`、`@Audio 1` 等明确指定每份素材负责的人物、构图、运动、镜头或声音；不要只写“参考附件”。用户改用其他模型时再适配其已知输入习惯，不要捏造参数。
 
 当信息存在重要歧义时，在提示词前用不超过三条“采用设定”说明。不要输出冗长的方法解释，除非用户要求分析。
 
