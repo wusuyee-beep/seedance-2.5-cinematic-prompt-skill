@@ -1,5 +1,7 @@
 # DiDi_OK × Seedance 2.5 写实电影感视频提示词 Skill
 
+![DiDi_OK × Seedance 2.5 Cinematic Prompt Skill](assets/seedance-cinematic-hero.png)
+
 一个面向 Seedance 2.5 的 Claude Code / Codex 兼容 Skill，用于把故事、场景、参考图、参考视频或粗略创意转化为可直接生成的写实电影级视频提示词。
 
 它不是提示词词库，而是一套镜头决策方法：先建立空间和连续性，再组织动作因果、运镜、真实物理、微表演、焦点变化与同期声。
@@ -51,8 +53,11 @@ git clone <YOUR_REPOSITORY_URL> ~/.claude/skills/ddok-video-prompt
 ddok-video-prompt/
 ├── SKILL.md
 ├── agents/openai.yaml
+├── assets/seedance-cinematic-hero.png
+├── prompt-library/test-cases-v1.md
 └── references/
     ├── seedance-2.5.md
+    ├── duration-recommendation.md
     ├── method.md
     ├── templates.md
     ├── acceptance.md
@@ -66,7 +71,9 @@ ddok-video-prompt/
 
 `references/cases.md` 收录并拆分了 6 个 DiDi_OK《Candy》镜头案例：微距物理、实验室群戏、发布会、移动遮挡转场、前景拾取和美术馆群像对白。案例用于学习结构，不应机械复制人物、对白或世界观。
 
-Skill 不会在用户未指定时擅自加入秒数或时间码；每条正式提示词都必须明确“无 BGM，无配乐！”，并只设计现场同期声、环境声、动作声和对白。同时使用“严格、必须、始终、全程、绝不”等原案例式强约束语言锁定关键生成要求。
+[`prompt-library/test-cases-v1.md`](prompt-library/test-cases-v1.md) 提供人物、多主体、产品、建筑、动漫五条待实测 Prompt。生成原片回填后，它们将升级为包含成片证据与失败复盘的正式 Case。
+
+Skill 不会在用户未指定时把秒数或时间码塞进 Prompt 正文；完整 Prompt 后会根据动作、对白、运镜、反应与尾帧容量，独立给出推荐生成时长。Seedance 2.5 官方单次最长 30 秒，超过容量时会建议拆段或多轮延长。每条正式提示词都必须明确“无 BGM，无配乐！”，并只设计现场同期声、环境声、动作声和对白。同时使用“严格、必须、始终、全程、绝不”等原案例式强约束语言锁定关键生成要求。
 
 每次生成后会按 100 分量表自审：DiDi_OK 六案保真占 90 分，Seedance 2.5 官方能力适配占 10 分；硬门槛失败或总分低于 90 的结果必须先重写，再交付。
 
@@ -90,3 +97,7 @@ Skill 不会在用户未指定时擅自加入秒数或时间码；每条正式�
 ## 权利说明
 
 本项目中的案例文本来自用户提供截图和原始页面，仅用于研究提示词结构与镜头方法。公开发布前，请确认相关案例文本的转载与授权边界。
+
+## License
+
+[MIT](LICENSE)
