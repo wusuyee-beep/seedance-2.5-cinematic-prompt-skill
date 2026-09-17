@@ -70,6 +70,15 @@ Skill 不会在用户未指定时擅自加入秒数或时间码；每条正式�
 
 每次生成后会按 100 分量表自审：DiDi_OK 六案保真占 90 分，Seedance 2.5 官方能力适配占 10 分；硬门槛失败或总分低于 90 的结果必须先重写，再交付。
 
+## 生成资料库
+
+本仓库同时维护面向生成创作的方法入口，视频与静态图像分开管理，避免时序、声音和运镜规则污染单帧生图提示词。
+
+- **视频提示词方向**：当前仓库的 `$ddok-video-prompt`，用于 Seedance 2.5 写实电影感生视频。
+- **生图提示词方向**：[cinematic-image-prompt-skill](https://github.com/wusuyee-beep/cinematic-image-prompt-skill)，用于真人电影感、纪实摄影、动漫插画、概念场景、建筑室内和电商产品图。
+
+两套方法的边界、共同基础与选用方式见 [`prompt-library/README.md`](prompt-library/README.md)，生图方向的核心结构见 [`prompt-library/image-prompt-direction.md`](prompt-library/image-prompt-direction.md)。
+
 ## 资料来源
 
 - [Seedance 2.5 官方页面](https://seed.bytedance.com/en/seedance2_5)
