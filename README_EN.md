@@ -13,7 +13,7 @@
 [![Qwen Code](https://img.shields.io/badge/Qwen_Code-compatible-615CED?style=flat-square)](https://qwenlm.github.io/qwen-code-docs/zh/users/features/skills/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-[Quick start](#quick-start) · [Six source cases](#six-didi_ok-cases) · [Test prompts](prompt-library/test-cases-v1.md) · [Method library](#method-library) · [Contributing](CONTRIBUTING.md)
+[Quick start](#quick-start) · [Work stills](#didi_ok-work-stills) · [Six source cases](#six-didi_ok-cases) · [Test prompts](prompt-library/test-cases-v1.md) · [Method library](#method-library) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -54,6 +54,33 @@ Use $ddok-video-prompt to turn “On a rainy night, a delivery rider hears a fam
 6. Add shot-specific failure prevention and explicitly reject BGM and musical score.
 7. Apply the 100-point rubric; rewrite before delivery if the score is below 90 or a hard gate fails.
 8. After the prompt body, recommend a generation duration based on content capacity.
+
+## DiDi_OK work stills
+
+The following user-provided stills form a cross-project DiDi_OK gallery. They demonstrate visual outcomes across subjects, but they are not presented as the six *Candy* rule cases or as results from the five pending Seedance 2.5 validation prompts.
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/works/candy-eye-closeup.png" alt="Extreme eye close-up"><br><sub>Extreme close-up: partial light, proximity, and visual attention</sub></td>
+    <td width="50%"><img src="assets/works/candy-foreground-pickup.png" alt="Foreground candy pickup"><br><sub>Foreground pickup: ground-level camera, scale, and finger interaction</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/office-standoff.png" alt="Multi-character office standoff"><br><sub>Office standoff: blocking, eyeline conflict, and spatial pressure</sub></td>
+    <td width="50%"><img src="assets/works/battlefield-follow.png" alt="Battlefield follow shot"><br><sub>Battlefield follow: rear tracking perspective, smoke layers, and group advance</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/battlefield-scope-view.png" alt="Battlefield scope view"><br><sub>Scope view: distant evidence, subjective field of view, and target compression</sub></td>
+    <td width="50%"><img src="assets/works/battlefield-rifle-pov.png" alt="First-person rifle view"><br><sub>First-person battlefield: weapon foreground, squad depth, and movement direction</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/shepherd-earth-moon.png" alt="SHEPHARD THE SHEPHERD Earth–Moon graphic"><br><sub>SHEPHARD THE SHEPHERD: graphic spatial relations and story information</sub></td>
+    <td width="50%"><img src="assets/works/lab-observation-room.png" alt="Laboratory observation room"><br><sub>Laboratory observation: glass separation, spectatorship, and institutional pressure</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/cat-ants-candy.png" alt="Cat, ants, and candy"><br><sub>Cat, ants, and candy: macro scale conflict, material, and depth</sub></td>
+    <td width="50%"><img src="assets/works/museum-dance.png" alt="Museum ensemble viewing a painting"><br><sub>Museum ensemble: layered backs, shared object, and focus relay</sub></td>
+  </tr>
+</table>
 
 ## Six DiDi_OK cases
 

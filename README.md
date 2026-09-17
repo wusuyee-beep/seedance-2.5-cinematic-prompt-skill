@@ -13,7 +13,7 @@
 [![Qwen Code](https://img.shields.io/badge/Qwen_Code-compatible-615CED?style=flat-square)](https://qwenlm.github.io/qwen-code-docs/zh/users/features/skills/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-[快速开始](#30-秒开始) · [六个原始 Case](#六个-didi_ok-case) · [待实测 Prompt](prompt-library/test-cases-v1.md) · [方法资料库](#方法资料库) · [参与贡献](CONTRIBUTING.md)
+[快速开始](#30-秒开始) · [作品静帧](#didi_ok-作品静帧) · [六个原始 Case](#六个-didi_ok-case) · [待实测 Prompt](prompt-library/test-cases-v1.md) · [方法资料库](#方法资料库) · [参与贡献](CONTRIBUTING.md)
 
 </div>
 
@@ -29,6 +29,7 @@
 - [30 秒开始](#30-秒开始)
 - [工作方式](#工作方式)
 - [适用方向](#适用方向)
+- [DiDi_OK 作品静帧](#didi_ok-作品静帧)
 - [六个 DiDi_OK Case](#六个-didi_ok-case)
 - [待实测 Case](#待实测-case)
 - [安装](#安装)
@@ -92,6 +93,33 @@ flowchart LR
 | 纪录片 / 发布会 | 现场操作者感、手持误差、自动对焦、公共空间与环境声 |
 | 动漫 / 风格化叙事 | 角色设计一致、运动规律、画风连续和可控转场 |
 | 参考图 / 视频 / 音频生成 | 每份素材职责单一明确，避免人物、构图、运动与声音互相污染 |
+
+## DiDi_OK 作品静帧
+
+以下为用户提供的 DiDi_OK 作品静帧，用于展示不同题材中的镜头意识与视觉结果。它们是作品画廊，不等同于下方六个《Candy》规则 Case，也不计入尚待实测的五条 Seedance 2.5 验证 Case。
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/works/candy-eye-closeup.png" alt="糖果作品中的人物眼部极近景"><br><sub>人物眼部极近景：局部光影、压迫距离与视觉注意力</sub></td>
+    <td width="50%"><img src="assets/works/candy-foreground-pickup.png" alt="前景糖果拾取镜头"><br><sub>前景糖果拾取：贴地机位、近大远小与手指交互</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/office-standoff.png" alt="警局多人物对峙"><br><sub>警局对峙：多主体站位、视线冲突与空间压力</sub></td>
+    <td width="50%"><img src="assets/works/battlefield-follow.png" alt="战场后方跟拍"><br><sub>战场跟拍：后方移动视角、烟火层次与群体推进</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/battlefield-scope-view.png" alt="战场瞄准镜视角"><br><sub>瞄准镜观察：远距视觉证据、主观视场与目标压缩</sub></td>
+    <td width="50%"><img src="assets/works/battlefield-rifle-pov.png" alt="战场第一人称枪械视角"><br><sub>第一人称战场：枪械前景、队员层次与运动方向</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/shepherd-earth-moon.png" alt="SHEPHARD THE SHEPHERD 地月概念画面"><br><sub>SHEPHARD THE SHEPHERD：图形化空间关系与叙事信息</sub></td>
+    <td width="50%"><img src="assets/works/lab-observation-room.png" alt="实验室玻璃观察空间"><br><sub>实验室观察：玻璃内外、观看关系与压抑制度空间</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/works/cat-ants-candy.png" alt="猫与蚂蚁搬运糖果"><br><sub>猫与蚂蚁糖果：微距尺度冲突、材质与前后层次</sub></td>
+    <td width="50%"><img src="assets/works/museum-dance.png" alt="美术馆群像观看画作"><br><sub>美术馆群像：背影层次、共同观看物与焦点接力</sub></td>
+  </tr>
+</table>
 
 ## 六个 DiDi_OK Case
 
@@ -186,6 +214,7 @@ ddok-video-prompt/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── assets/seedance-cinematic-hero.png
+├── assets/works/
 ├── prompt-library/
 │   ├── README.md
 │   ├── image-prompt-direction.md
