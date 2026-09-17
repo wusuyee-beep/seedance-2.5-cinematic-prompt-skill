@@ -13,7 +13,7 @@
 [![Qwen Code](https://img.shields.io/badge/Qwen_Code-compatible-615CED?style=flat-square)](https://qwenlm.github.io/qwen-code-docs/zh/users/features/skills/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-[快速开始](#30-秒开始) · [作品静帧](#didi_ok-作品静帧) · [六个原始 Case](#六个-didi_ok-case) · [待实测 Prompt](prompt-library/test-cases-v1.md) · [方法资料库](#方法资料库) · [参与贡献](CONTRIBUTING.md)
+[快速开始](#30-秒开始) · [作品静帧](#didi_ok-作品静帧) · [六个原始 Case](#六个-didi_ok-case) · [写实测试 Prompt](prompt-library/test-cases-v2.md) · [方法资料库](#方法资料库) · [参与贡献](CONTRIBUTING.md)
 
 </div>
 
@@ -91,12 +91,11 @@ flowchart LR
 | 产品 / 微距物理 | 材质、接触、摩擦、表面张力、结构连续性与真实声音 |
 | 建筑 / 连续空间 | 尺度、结构、路线、遮挡、曝光适应、反射和空间混响 |
 | 纪录片 / 发布会 | 现场操作者感、手持误差、自动对焦、公共空间与环境声 |
-| 动漫 / 风格化叙事 | 角色设计一致、运动规律、画风连续和可控转场 |
 | 参考图 / 视频 / 音频生成 | 每份素材职责单一明确，避免人物、构图、运动与声音互相污染 |
 
 ## DiDi_OK 作品静帧
 
-以下为用户提供的 DiDi_OK 作品静帧，用于展示不同题材中的镜头意识与视觉结果。它们是作品画廊，不等同于下方六个《Candy》规则 Case，也不计入尚待实测的五条 Seedance 2.5 验证 Case。
+以下为用户提供的 DiDi_OK 作品静帧，用于展示不同题材中的镜头意识与视觉结果。它们是作品画廊，不等同于下方六个《Candy》规则 Case，也不计入尚待实测的真人写实 Seedance 2.5 验证 Case。
 
 <table>
   <tr>
@@ -138,17 +137,14 @@ flowchart LR
 
 ## 待实测 Case
 
-仓库已准备五条“Prompt → 成片 → 复盘”测试任务，等待回填未经剪辑的真实生成结果：
+旧版五条测试 Prompt 已全部下线，动漫方向已经删除。测试不再继续按产品、建筑等题材扩类，只保留“群像”和“单人物”两个真人写实 Case：
 
-| 类型 | 测试主题 | 推荐时长 |
-| --- | --- | ---: |
-| 单人物 | 钟表修复师的微表演与微小物理 | 15 秒 |
-| 多主体 | 停电后的生日餐厅群像调度 | 24 秒 |
-| 产品 | 机械腕表与水滴的材质物理 | 12 秒 |
-| 建筑 | 雾晨混凝土图书馆连续空间 | 30 秒 |
-| 动漫 | 海边末班车的克制叙事 | 30 秒 |
+| 类型 | 测试主题 | 状态 |
+| --- | --- | --- |
+| 群像 | 合租厨房里的焦边煎蛋 | 已回填 30.08 秒原始成片与五张静帧 |
+| 单人物 | 凌晨药房的两条语音 | Prompt 已重写，等待生成 |
 
-[复制五条完整测试 Prompt](prompt-library/test-cases-v1.md)
+[查看合租厨房完整实测 Case](cases/shared-kitchen/README.md) · [复制两条完整真人写实测试 Prompt](prompt-library/test-cases-v2.md)
 
 ## 安装
 
@@ -215,10 +211,11 @@ ddok-video-prompt/
 ├── agents/openai.yaml
 ├── assets/seedance-cinematic-hero.png
 ├── assets/works/
+├── cases/shared-kitchen/
 ├── prompt-library/
 │   ├── README.md
 │   ├── image-prompt-direction.md
-│   └── test-cases-v1.md
+│   └── test-cases-v2.md
 ├── references/
 │   ├── cases.md
 │   ├── case-pattern-analysis.md

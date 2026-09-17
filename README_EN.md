@@ -13,7 +13,7 @@
 [![Qwen Code](https://img.shields.io/badge/Qwen_Code-compatible-615CED?style=flat-square)](https://qwenlm.github.io/qwen-code-docs/zh/users/features/skills/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-[Quick start](#quick-start) · [Work stills](#didi_ok-work-stills) · [Six source cases](#six-didi_ok-cases) · [Test prompts](prompt-library/test-cases-v1.md) · [Method library](#method-library) · [Contributing](CONTRIBUTING.md)
+[Quick start](#quick-start) · [Work stills](#didi_ok-work-stills) · [Six source cases](#six-didi_ok-cases) · [Live-action test prompts](prompt-library/test-cases-v2.md) · [Method library](#method-library) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -57,7 +57,7 @@ Use $ddok-video-prompt to turn “On a rainy night, a delivery rider hears a fam
 
 ## DiDi_OK work stills
 
-The following user-provided stills form a cross-project DiDi_OK gallery. They demonstrate visual outcomes across subjects, but they are not presented as the six *Candy* rule cases or as results from the five pending Seedance 2.5 validation prompts.
+The following user-provided stills form a cross-project DiDi_OK gallery. They demonstrate visual outcomes across subjects, but they are not presented as the six *Candy* rule cases or as results from the pending live-action Seedance 2.5 validation prompts.
 
 <table>
   <tr>
@@ -90,9 +90,9 @@ The repository keeps the source material as six distinct cases: macro ants movin
 
 ## Test prompts
 
-Five prompts are ready for real Seedance 2.5 generation and post-generation review: a watch repairer, a restaurant ensemble, a mechanical watch product shot, a concrete library, and a hand-drawn seaside-train scene.
+The previous five-prompt set has been withdrawn and the animation direction removed. Testing is no longer expanded into product or architecture categories. Only two photorealistic live-action cases remain: the user-approved shared-kitchen ensemble and a rewritten single-person night-pharmacy scene.
 
-[Open all five production prompts](prompt-library/test-cases-v1.md)
+[Open the completed shared-kitchen case](cases/shared-kitchen/README.md) · [Open both live-action production prompts](prompt-library/test-cases-v2.md)
 
 ## Installation
 
