@@ -27,6 +27,8 @@ else:
     for required in ("无 BGM，无配乐！", "references/duration-recommendation.md", "推荐时长"):
         if required not in text:
             fail(f"SKILL.md is missing required rule: {required}")
+    if "name: didi-ok-video-prompt" not in text:
+        fail("SKILL.md must use the canonical didi-ok-video-prompt machine identifier")
 
 old_cases = ROOT / "prompt-library" / "test-cases-v1.md"
 if old_cases.exists():
@@ -51,6 +53,41 @@ else:
     for placeholder in ("几人自然交谈", "继续争论", "说了几句", "背景有人说话"):
         if placeholder in prompt_blocks:
             fail(f"Test prompts contain summarized dialogue placeholder: {placeholder}")
+
+templates = ROOT / "references" / "templates.md"
+if not templates.exists():
+    fail("references/templates.md is missing")
+else:
+    template_text = templates.read_text(encoding="utf-8")
+    template_markers = (
+        "模板一：超低机位微观物理过程",
+        "模板二：制度空间群像与物理突变",
+        "模板三：公共发言纪录片长镜头",
+        "模板四：超低机位前景拾取",
+        "群像对白模板",
+        "遮挡转场模板",
+    )
+    for marker in template_markers:
+        if marker not in template_text:
+            fail(f"Missing DiDi_OK mechanism template: {marker}")
+    if template_text.count("无 BGM，无配乐！") < 6:
+        fail("All six DiDi_OK mechanism templates must explicitly say 无 BGM，无配乐！")
+
+for reference_name in ("audiovisual-language-analysis.md", "audiovisual-language-sources.md"):
+    if not (ROOT / "references" / reference_name).exists():
+        fail(f"references/{reference_name} is missing")
+
+bathroom_case = ROOT / "cases" / "bathroom-haircut"
+for required_case_file in (
+    bathroom_case / "README.md",
+    bathroom_case / "bathroom-haircut-result.mp4",
+):
+    if not required_case_file.exists():
+        fail(f"Missing validated bathroom case asset: {required_case_file.relative_to(ROOT)}")
+
+for text_file in list(ROOT.rglob("*.md")) + [ROOT / "agents" / "openai.yaml"]:
+    if text_file.exists() and "ddok" in text_file.read_text(encoding="utf-8").lower():
+        fail(f"Legacy ddok spelling remains in {text_file.relative_to(ROOT)}; use DiDi_OK for display and didi-ok for machine IDs")
 
 link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 for markdown in ROOT.rglob("*.md"):

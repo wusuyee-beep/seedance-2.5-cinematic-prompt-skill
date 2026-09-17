@@ -1,7 +1,7 @@
 interface:
   display_name: "Seedance 2.5 写实电影提示词"
   short_description: "将创意转化为Seedance 2.5写实电影级视频提示词"
-  default_prompt: "Use $ddok-video-prompt to turn my idea and references into a production-ready Seedance 2.5 cinematic video prompt."
+  default_prompt: "Use $didi-ok-video-prompt to turn my idea and references into a production-ready Seedance 2.5 cinematic video prompt."
 
 policy:
   allow_implicit_invocation: true

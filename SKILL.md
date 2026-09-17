@@ -1,5 +1,5 @@
 ---
-name: ddok-video-prompt
+name: didi-ok-video-prompt
 description: This skill should be used when the user asks to “写 Seedance 2.5 提示词”, “写实电影感生视频”, “优化视频生成 prompt”, “按 DiDi_OK 风格写镜头”, “把故事变成电影级视频提示词”, “设计一镜到底、纪录片手持、群像对白、物理变形或遮挡转场”, or provides images, video, audio, a scene, script, storyboard, or rough idea that needs a production-ready Seedance 2.5 prompt. Use it primarily for photorealistic cinematic text-to-video, reference-to-video, extension, or editing tasks. Do not use it for still-image prompts or ordinary screenplay writing unless the requested output is a video-generation prompt.
 ---
 
@@ -23,6 +23,7 @@ description: This skill should be used when the user asks to “写 Seedance 2.5
 - 使用 Seedance 2.5 的长叙事、多模态参考、原生声音、延长或编辑能力时，读取 `references/seedance-2.5.md`。
 - 每次生成正式 Prompt 后读取 `references/duration-recommendation.md`，依据动作、对白、运镜、反应和收束所需容量，给出独立的推荐生成时长。
 - 任务涉及微距物理、实验室群戏、发布会、前景透视、遮挡转场或群像对白时，再读取 `references/cases.md` 中对应案例。只迁移机制，不搬运故事元素。
+- 需要解释或复刻超低机位、微观视角、手持抖动、变焦、移动摄影、拉焦、景别、视点或场面调度时，读取 `references/audiovisual-language-analysis.md`；其依据和书目见 `references/audiovisual-language-sources.md`。
 - 需要判断哪些是六案固定骨架、哪些是高频或镜头类型模块时，读取 `references/case-pattern-analysis.md`。
 - 任务涉及连续长叙事、多模态素材分工、白模、延长或定向编辑时，读取 `references/official-seedance-patterns.md`；这部分只作为约 10% 的模型能力补充，不覆盖 DiDi_OK 的写法。
 - 需要输出可复制模板、分镜版或模型适配版时，读取 `references/templates.md`。
@@ -57,9 +58,11 @@ description: This skill should be used when the user asks to “写 Seedance 2.5
 
 ### 4. 让摄影机像真实操作者
 
-说明景别、机位、镜头焦段倾向、移动方向、速度和拍摄动机。把手持抖动、呼吸感、遮挡、失焦、再对焦、曝光轻微变化写成对事件的反应，而不是空泛质感词。
+说明景别、机位、镜头焦段倾向、移动方向、速度和拍摄动机。把手持抖动、呼吸感、遮挡、失焦、再对焦、曝光轻微变化写成对事件的反应，而不是空泛质感词。超低机位必须同时交代镜头相对承载面的高度、前景物距、主体尺度和遮挡关系。
 
 使用“镜头为什么移动”约束运镜：跟随人物、寻找视线、避让遮挡、被声音吸引、确认关键细节。摄影机应晚半拍感知突发事件，避免全知视角。
+
+严格区分三种动作：`zoom` 只改变视角范围而不改变机位；推拉摄影改变机位、透视与视差；拉焦只移动清晰平面。纪录片手持必须从呼吸、步伐、突发后仰、抢拍过冲或微距放大中选择有来源的低频不稳定，绝不把随机高频乱抖当成真实。
 
 ### 5. 写出物理与表演
 
@@ -118,3 +121,4 @@ Prompt 审核通过后，按 `references/duration-recommendation.md` 计算内�
 13. Prompt 正文之后有独立“推荐时长”；选择依据来自可见节拍和信息容量，未超过单次 30 秒官方上限，且没有伪造平台固定档位。
 14. 所有对白、画外话、电话、广播和录音均逐句写出原文；不存在“自然交谈”等占位词。无对白时已明确写出“本镜头无对白、无旁白”。
 15. 最终视觉合同是极度真实可信的真人实拍，而不是动漫、插画、游戏 CG 或其他非写实风格。
+16. 超低机位写清了相对高度、前景距离和尺度锚点；手持抖动、变焦、移动摄影与拉焦均有明确动机，且没有互相混写。

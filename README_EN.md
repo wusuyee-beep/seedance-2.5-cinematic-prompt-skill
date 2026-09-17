@@ -41,7 +41,7 @@ Every production prompt must state: **No BGM. No musical score.**
 ## Quick start
 
 ```text
-Use $ddok-video-prompt to turn “On a rainy night, a delivery rider hears a familiar melody outside a record shop that is about to close” into a realistic cinematic Seedance 2.5 prompt.
+Use $didi-ok-video-prompt to turn “On a rainy night, a delivery rider hears a familiar melody outside a record shop that is about to close” into a realistic cinematic Seedance 2.5 prompt.
 ```
 
 ## Workflow
@@ -90,9 +90,9 @@ The repository keeps the source material as six distinct cases: macro ants movin
 
 ## Test prompts
 
-The previous five-prompt set has been withdrawn and the animation direction removed. Testing is no longer expanded into product or architecture categories. Only two photorealistic live-action cases remain: the user-approved shared-kitchen ensemble and a rewritten single-person night-pharmacy scene.
+The previous five-prompt set has been withdrawn and the animation direction removed. Testing is no longer expanded into product or architecture categories. Two validated photorealistic live-action cases remain: the shared-kitchen ensemble and Oliver's single-person bathroom haircut, each with a 30.08-second original result and five stills.
 
-[Open the completed shared-kitchen case](cases/shared-kitchen/README.md) · [Open both live-action production prompts](prompt-library/test-cases-v2.md)
+[Open the shared-kitchen ensemble case](cases/shared-kitchen/README.md) · [Open the bathroom-haircut single-person case](cases/bathroom-haircut/README.md) · [Open both live-action production prompts](prompt-library/test-cases-v2.md)
 
 ## Installation
 
@@ -103,7 +103,7 @@ npx skills add wusuyee-beep/seedance-2.5-cinematic-prompt-skill -g
 Or clone the full repository and place it in the target agent's Skills directory:
 
 ```bash
-git clone https://github.com/wusuyee-beep/seedance-2.5-cinematic-prompt-skill.git ddok-video-prompt
+git clone https://github.com/wusuyee-beep/seedance-2.5-cinematic-prompt-skill.git didi-ok-video-prompt
 ```
 
 Do not copy only `SKILL.md`; the cases, rubric, duration rules, and Seedance capability boundaries live in `references/`.
@@ -116,6 +116,8 @@ Do not copy only `SKILL.md`; the cases, rubric, duration rules, and Seedance cap
 | [`case-pattern-analysis.md`](references/case-pattern-analysis.md) | Shared, frequent, and shot-specific patterns with occurrence rates |
 | [`method.md`](references/method.md) | Method for turning a rough idea into an executable video prompt |
 | [`templates.md`](references/templates.md) | Continuous-shot, reference-input, dialogue, and delivery templates |
+| [`audiovisual-language-analysis.md`](references/audiovisual-language-analysis.md) | Functional analysis of all six cases plus reproducible low-angle, handheld, zoom, and focus syntax |
+| [`audiovisual-language-sources.md`](references/audiovisual-language-sources.md) | Verifiable CUC textbooks, official courses, and cinematography/documentary references |
 | [`seedance-2.5.md`](references/seedance-2.5.md) | Official capability boundaries and model adaptation |
 | [`duration-recommendation.md`](references/duration-recommendation.md) | Duration recommendation after the prompt body |
 | [`review-rubric.md`](references/review-rubric.md) | 100-point pre-delivery audit and hard gates |

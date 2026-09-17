@@ -13,7 +13,7 @@
 [![Qwen Code](https://img.shields.io/badge/Qwen_Code-compatible-615CED?style=flat-square)](https://qwenlm.github.io/qwen-code-docs/zh/users/features/skills/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-[快速开始](#30-秒开始) · [作品静帧](#didi_ok-作品静帧) · [六个原始 Case](#六个-didi_ok-case) · [写实测试 Prompt](prompt-library/test-cases-v2.md) · [方法资料库](#方法资料库) · [参与贡献](CONTRIBUTING.md)
+[快速开始](#30-秒开始) · [作品静帧](#didi_ok-作品静帧) · [六个原始 Case](#六个-didi_ok-case) · [六类镜头模板](references/templates.md) · [写实测试 Prompt](prompt-library/test-cases-v2.md) · [方法资料库](#方法资料库) · [参与贡献](CONTRIBUTING.md)
 
 </div>
 
@@ -31,7 +31,7 @@
 - [适用方向](#适用方向)
 - [DiDi_OK 作品静帧](#didi_ok-作品静帧)
 - [六个 DiDi_OK Case](#六个-didi_ok-case)
-- [待实测 Case](#待实测-case)
+- [实测 Case](#实测-case)
 - [安装](#安装)
 - [方法资料库](#方法资料库)
 - [质量审核](#质量审核)
@@ -53,7 +53,7 @@
 ## 30 秒开始
 
 ```text
-使用 $ddok-video-prompt，把“雨夜，一个外卖员在即将关门的唱片店门口听见熟悉旋律”写成 Seedance 2.5 写实电影感视频提示词。
+使用 $didi-ok-video-prompt，把“雨夜，一个外卖员在即将关门的唱片店门口听见熟悉旋律”写成 Seedance 2.5 写实电影感视频提示词。
 ```
 
 有参考素材时，明确每份素材的职责：
@@ -95,7 +95,7 @@ flowchart LR
 
 ## DiDi_OK 作品静帧
 
-以下为用户提供的 DiDi_OK 作品静帧，用于展示不同题材中的镜头意识与视觉结果。它们是作品画廊，不等同于下方六个《Candy》规则 Case，也不计入尚待实测的真人写实 Seedance 2.5 验证 Case。
+以下为用户提供的 DiDi_OK 作品静帧，用于展示不同题材中的镜头意识与视觉结果。它们是作品画廊，不等同于下方六个《Candy》规则 Case，也不计入已经回填成片的两条真人写实 Seedance 2.5 验证 Case。
 
 <table>
   <tr>
@@ -135,16 +135,16 @@ flowchart LR
 
 [查看六案原文与完整拆解](references/cases.md) · [查看六案模块频率分析](references/case-pattern-analysis.md)
 
-## 待实测 Case
+## 实测 Case
 
 旧版五条测试 Prompt 已全部下线，动漫方向已经删除。测试不再继续按产品、建筑等题材扩类，只保留“群像”和“单人物”两个真人写实 Case：
 
 | 类型 | 测试主题 | 状态 |
 | --- | --- | --- |
 | 群像 | 合租厨房里的焦边煎蛋 | 已回填 30.08 秒原始成片与五张静帧 |
-| 单人物 | 凌晨药房的两条语音 | Prompt 已重写，等待生成 |
+| 单人物 | 浴室剪坏刘海 | 已回填 30.08 秒原始成片与五张静帧 |
 
-[查看合租厨房完整实测 Case](cases/shared-kitchen/README.md) · [复制两条完整真人写实测试 Prompt](prompt-library/test-cases-v2.md)
+[查看合租厨房群像实测 Case](cases/shared-kitchen/README.md) · [查看浴室剪发单人物实测 Case](cases/bathroom-haircut/README.md) · [复制两条完整真人写实测试 Prompt](prompt-library/test-cases-v2.md)
 
 ## 安装
 
@@ -157,21 +157,21 @@ npx skills add wusuyee-beep/seedance-2.5-cinematic-prompt-skill -g
 也可以手动克隆完整仓库：
 
 ```bash
-git clone https://github.com/wusuyee-beep/seedance-2.5-cinematic-prompt-skill.git ddok-video-prompt
+git clone https://github.com/wusuyee-beep/seedance-2.5-cinematic-prompt-skill.git didi-ok-video-prompt
 ```
 
-把整个 `ddok-video-prompt/` 目录放入目标 Agent 的 Skills 目录。不要只复制 `SKILL.md`，因为六案、审核表、Seedance 能力边界和时长规则位于 `references/`。
+把整个 `didi-ok-video-prompt/` 目录放入目标 Agent 的 Skills 目录。不要只复制 `SKILL.md`，因为六案、审核表、Seedance 能力边界和时长规则位于 `references/`。
 
-- Codex：`~/.codex/skills/ddok-video-prompt/`
-- Claude Code：`~/.claude/skills/ddok-video-prompt/`
+- Codex：`~/.codex/skills/didi-ok-video-prompt/`
+- Claude Code：`~/.claude/skills/didi-ok-video-prompt/`
 - CodeBuddy：用户级或项目级 Skills 目录
-- Qwen Code：`~/.qwen/skills/ddok-video-prompt/`
+- Qwen Code：`~/.qwen/skills/didi-ok-video-prompt/`
 - Qoder：通过 Skills 上传 ZIP，或放入 `~/.qoder/skills/`
 
 安装后可用以下请求测试：
 
 ```text
-使用 $ddok-video-prompt 写一个写实电影感视频 Prompt：一名女人在凌晨便利店发现收银员与照片里的人长得一模一样。只保留真实同期声，无 BGM、无配乐。
+使用 $didi-ok-video-prompt 写一个写实电影感视频 Prompt：一名女人在凌晨便利店发现收银员与照片里的人长得一模一样。只保留真实同期声，无 BGM、无配乐。
 ```
 
 ## 方法资料库
@@ -182,6 +182,8 @@ git clone https://github.com/wusuyee-beep/seedance-2.5-cinematic-prompt-skill.gi
 | [`case-pattern-analysis.md`](references/case-pattern-analysis.md) | 六案共有、高频和差异化模块的占比规律 |
 | [`method.md`](references/method.md) | 从粗略创意组织成可执行视频 Prompt 的方法 |
 | [`templates.md`](references/templates.md) | 连续镜头、参考生成、对白和输出结构模板 |
+| [`audiovisual-language-analysis.md`](references/audiovisual-language-analysis.md) | 六案逐段功能、视听语言原理、复刻公式及超低机位/手持/变焦语法 |
+| [`audiovisual-language-sources.md`](references/audiovisual-language-sources.md) | 中传教材、官方公开课与专业摄影/纪录片参考书目 |
 | [`seedance-2.5.md`](references/seedance-2.5.md) | 官方能力边界与模型适配规则 |
 | [`duration-recommendation.md`](references/duration-recommendation.md) | Prompt 之后如何按内容容量推荐生成时长 |
 | [`review-rubric.md`](references/review-rubric.md) | 交付前 100 分审核与硬门槛 |
@@ -206,12 +208,13 @@ git clone https://github.com/wusuyee-beep/seedance-2.5-cinematic-prompt-skill.gi
 ## 项目结构
 
 ```text
-ddok-video-prompt/
+didi-ok-video-prompt/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── assets/seedance-cinematic-hero.png
 ├── assets/works/
 ├── cases/shared-kitchen/
+├── cases/bathroom-haircut/
 ├── prompt-library/
 │   ├── README.md
 │   ├── image-prompt-direction.md
@@ -221,6 +224,8 @@ ddok-video-prompt/
 │   ├── case-pattern-analysis.md
 │   ├── method.md
 │   ├── templates.md
+│   ├── audiovisual-language-analysis.md
+│   ├── audiovisual-language-sources.md
 │   ├── seedance-2.5.md
 │   ├── duration-recommendation.md
 │   ├── review-rubric.md
