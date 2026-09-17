@@ -1,13 +1,13 @@
 ---
 name: ddok-video-prompt
-description: This skill should be used when the user asks to “写 Seedance 2.5 提示词”, “写实电影感生视频”, “优化视频生成 prompt”, “按 DDOk 风格写镜头”, “把故事变成电影级视频提示词”, “设计一镜到底、纪录片手持、群像对白、物理变形或遮挡转场”, or provides images, video, audio, a scene, script, storyboard, or rough idea that needs a production-ready Seedance 2.5 prompt. Use it primarily for photorealistic cinematic text-to-video, reference-to-video, extension, or editing tasks. Do not use it for still-image prompts or ordinary screenplay writing unless the requested output is a video-generation prompt.
+description: This skill should be used when the user asks to “写 Seedance 2.5 提示词”, “写实电影感生视频”, “优化视频生成 prompt”, “按 DiDi_OK 风格写镜头”, “把故事变成电影级视频提示词”, “设计一镜到底、纪录片手持、群像对白、物理变形或遮挡转场”, or provides images, video, audio, a scene, script, storyboard, or rough idea that needs a production-ready Seedance 2.5 prompt. Use it primarily for photorealistic cinematic text-to-video, reference-to-video, extension, or editing tasks. Do not use it for still-image prompts or ordinary screenplay writing unless the requested output is a video-generation prompt.
 ---
 
-# DDOk Video Prompt
+# DiDi_OK Video Prompt
 
-把用户的创意转化为可直接投喂 Seedance 2.5 的写实电影级提示词。复用 DDOk 案例中的决策方法与表达强度：先建立可拍摄的空间与镜头路线，再用动作因果、真实物理、微表演、对焦行为和同期声把画面写“活”。不要机械复刻糖果、美术馆、人物身份或对白。
+把用户的创意转化为可直接投喂 Seedance 2.5 的写实电影级提示词。复用 DiDi_OK 案例中的决策方法与表达强度：先建立可拍摄的空间与镜头路线，再用动作因果、真实物理、微表演、对焦行为和同期声把画面写“活”。不要机械复刻糖果、美术馆、人物身份或对白。
 
-## DDOk 保真硬规则
+## DiDi_OK 保真硬规则
 
 - **不得擅自增加时长或时间码！** 用户没有指定秒数时，不写“15 秒”“30 秒”或 `0–3 秒` 等分段；按事件自然完成所需的连续篇幅书写。只有用户明确给出时长，或明确要求按时间轴拆分时，才进行时长适配。
 - **每一条正式提示词都必须单独写明“无 BGM，无配乐！”** 这是生成能力约束，不是可选审美偏好。只详细描述现场同期声、环境声、动作声和人物对白。
@@ -23,7 +23,7 @@ description: This skill should be used when the user asks to “写 Seedance 2.5
 - 需要判断哪些是六案固定骨架、哪些是高频或镜头类型模块时，读取 `references/case-pattern-analysis.md`。
 - 任务涉及连续长叙事、多模态素材分工、白模、延长或定向编辑时，读取 `references/official-seedance-patterns.md`；这部分只作为约 10% 的模型能力补充，不覆盖 DiDi_OK 的写法。
 - 需要输出可复制模板、分镜版或模型适配版时，读取 `references/templates.md`。
-- 用户要求审查、验收或比较 DDOk 保真度时，读取 `references/acceptance.md`，逐项给出证据，不得只报告格式校验通过。
+- 用户要求审查、验收或比较 DiDi_OK 保真度时，读取 `references/acceptance.md`，逐项给出证据，不得只报告格式校验通过。
 - 每次正式提示词生成完成后，读取 `references/review-rubric.md` 做内部审核；硬门槛失败或低于 90 分时，先修订并重新评分，再交付。
 
 ## 工作流

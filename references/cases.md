@@ -1,4 +1,4 @@
-# DDOk《Candy》案例库
+# DiDi_OK《Candy》案例库
 
 来源：[DiDi_OK 解读《Candy》镜头提示词](https://bytedance.larkoffice.com/wiki/L6Pywea3KiBEqAkg3N9cunZdnFg)及用户提供的 16 张截图。页面共有 6 个独立提示词块；截图完整覆盖其中 5 个，“帷幕切镜”由原文链接补充。
 
